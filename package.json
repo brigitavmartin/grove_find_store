@@ -1,0 +1,24 @@
+{
+  "name": "store-find",
+  "version": "1.0.0",
+  "description": "Enter an address or zip code and get the closest Grove store location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CLI"
+  ],
+  "author": "Brigita Martin",
+  "license": "none",
+  "bin": {
+    "store-find": "./bin/index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "csv-parse": "^5.2.2",
+    "dotenv": "^16.0.1",
+    "node-fetch": "^3.2.6",
+    "yargs": "13.2"
+  }
+}
