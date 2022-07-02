@@ -13,20 +13,20 @@ async function main() {
     skip_empty_lines: true,
   });
   const options = yargs
-    .usage("Usage: store-find <command> <options>")
+    .usage("Usage: find_store <options>")
     .option("address", {
       alias: "a",
-      describe: "Starting point in standard postal address format",
+      describe: "Starting point in standard postal address format.",
       type: "string",
     })
     .option("zip", {
       alias: "z",
-      describe: "The starting point as a six-digit zipcode",
+      describe: "The starting point as a six-digit zipcode.",
       type: "string",
     })
     .option("units", {
       alias: "u",
-      describe: "Which system of unit you would like your answer in.",
+      describe: "Which unit of distance you would like your answer in.",
       type: "string",
       default: "mi",
       choices: ["km", "mi"],
