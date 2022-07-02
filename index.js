@@ -58,24 +58,23 @@ async function main() {
           distance(lat, lon, startLoc.Latitude, startLoc.Longitude) -
           distance(lat, lon, endLoc.Latitude, endLoc.Longitude)
       );
+      const loc = locations[0];
       var answer = {
-        storeAddress: locations[0].Address,
-        distance: distance(
+        storeAddress: `${loc.Address}, ${loc.City}, ${loc.State} ${loc["Zip Code"]}`,
+        distance: `${distance(
           lat,
           lon,
           locations[0].Latitude,
           locations[0].Longitude,
           options.units
-        ),
+        ).toFixed(2)} ${options.units}`,
       };
 
       if (options.output == "json") {
         console.log(answer);
       } else {
         console.log(
-          `The nearest store address is ${
-            answer.storeAddress
-          }, and the distance is ${answer.distance.toFixed(2)} ${options.units}`
+          `The nearest store address is ${answer.storeAddress}, and the distance is ${answer.distance}`
         );
       }
     }

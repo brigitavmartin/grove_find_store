@@ -1,5 +1,5 @@
 {
-  "name": "store-find",
+  "name": "find_store",
   "version": "1.0.0",
   "description": "Enter an address or zip code and get the closest Grove store location.",
   "main": "index.js",
@@ -12,7 +12,7 @@
   "author": "Brigita Martin",
   "license": "none",
   "bin": {
-    "store-find": "./bin/index.js"
+    "find_store": "./index.js"
   },
   "type": "module",
   "dependencies": {

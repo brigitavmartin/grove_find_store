@@ -23,10 +23,6 @@ Example
 find_store --address="1770 Union St, San Francisco, CA 94123"
 find_store --zip=94115 --units=km
 
-Assumptions:
-
-- all stores are within the US
-
 Pseudocode (Process):
 // pull csv file into an array -- CHECK
 // parse input (check if address or zip is real using geoapify) -- CHECK  
