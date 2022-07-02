@@ -1,4 +1,4 @@
-# grove_store_find
+# grove_find_store
 
 This is a solution to the grove coding challenge at: https://github.com/groveco/code-challenge
 
