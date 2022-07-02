@@ -26,16 +26,14 @@ async function main() {
     })
     .option("units", {
       alias: "u",
-      describe:
-        "Which system of unit you would like your answer in; either kilometers or miles.",
+      describe: "Which system of unit you would like your answer in.",
       type: "string",
       default: "mi",
       choices: ["km", "mi"],
     })
     .option("output", {
       alias: "o",
-      describe:
-        "How you would like your output to look; either as text or in a json format.",
+      describe: "How you would like your output to look.",
       type: "string",
       default: "text",
       choices: ["text", "json"],
@@ -54,9 +52,9 @@ async function main() {
 
     if (lat && lon) {
       locations.sort(
-        (startLoc, endLoc) =>
-          distance(lat, lon, startLoc.Latitude, startLoc.Longitude) -
-          distance(lat, lon, endLoc.Latitude, endLoc.Longitude)
+        (loc1, loc2) =>
+          distance(lat, lon, loc1.Latitude, loc1.Longitude) -
+          distance(lat, lon, loc2.Latitude, loc2.Longitude)
       );
       const loc = locations[0];
       var answer = {
