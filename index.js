@@ -62,8 +62,8 @@ async function main() {
         distance: `${distance(
           lat,
           lon,
-          locations[0].Latitude,
-          locations[0].Longitude,
+          loc.Latitude,
+          loc.Longitude,
           options.units
         ).toFixed(2)} ${options.units}`,
       };
