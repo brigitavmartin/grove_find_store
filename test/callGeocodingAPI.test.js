@@ -4,7 +4,7 @@ import chaiAsPromised from "chai-as-promised";
 
 use(chaiAsPromised);
 
-describe("Testing the Geocoding API", function () {
+describe("Testing the Geocoding API function", function () {
   it("1. It should fail if the options don't exist", async function () {
     await expect(callGeocodingAPI()).to.be.rejectedWith(Error);
   });

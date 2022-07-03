@@ -1,15 +1,9 @@
 // this was pulled from https://www.geodatasource.com/developers/javascript
 
-/*
-  desired test cases
-  ------------------
-  1. it should fail if it's missing a parameter
-  2. it should return 0 if the coordinates match
-  3. it should default to miles as the units
-  4. it should return km if unit = km
-*/
-
 export function getDistance(lat1, lon1, lat2, lon2, unit) {
+  if (!lat1 || !lon1 || !lat2 || !lon2) {
+    throw new Error("getDistance isn't getting its needed input; this is bad");
+  }
   if (lat1 == lat2 && lon1 == lon2) {
     return 0;
   } else {

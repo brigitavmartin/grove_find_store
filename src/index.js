@@ -9,7 +9,6 @@ import { generateOutput } from "./generateOutput.js";
 async function main() {
   // define cli options
   const options = defineCLIOptions();
-  console.log(options);
   // ping geoapify api to see if a valid result returns
   const { lat, lon } = await callGeocodingAPI(options);
   // parse csv file into an array of arrays

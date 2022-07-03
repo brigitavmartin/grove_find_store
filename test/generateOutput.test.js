@@ -10,12 +10,7 @@ import { expect } from "chai";
 */
 
 describe("Testing the generateOutput function", function () {
-  it("1. It should fail if there are no parameters", function (done) {
-    // expect(
-    //   generateOutput().to.throw(
-    //     `TypeError: Cannot read properties of undefined (reading 'Address')`
-    //   )
-    // );
-    done();
+  it("1. It should fail if there are no parameters", function () {
+    expect(generateOutput).to.throw();
   });
 });
