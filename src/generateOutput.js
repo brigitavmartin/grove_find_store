@@ -1,17 +1,9 @@
-import { distance } from "./distance.js";
-
-/*
-  desired test cases
-  ------------------
-  1. it should fail if a parameter is missing
-  2. it should return an answer that defaults to text
-  3. it should return a json object if the option is given
-*/
+import { getDistance } from "./getDistance.js";
 
 export function generateOutput(closestStore, lat, lon, options) {
   var answer = {
     storeAddress: `${closestStore.Address}, ${closestStore.City}, ${closestStore.State} ${closestStore["Zip Code"]}`,
-    distance: `${distance(
+    distance: `${getDistance(
       lat,
       lon,
       closestStore.Latitude,

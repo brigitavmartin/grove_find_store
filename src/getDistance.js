@@ -9,7 +9,7 @@
   4. it should return km if unit = km
 */
 
-export function distance(lat1, lon1, lat2, lon2, unit) {
+export function getDistance(lat1, lon1, lat2, lon2, unit) {
   if (lat1 == lat2 && lon1 == lon2) {
     return 0;
   } else {
