@@ -1,5 +1,11 @@
 import yargs from "yargs";
 
+/*
+  desired test case
+  ------------------
+  1. it should return an object with keys (address, zip, units, & output)
+*/
+
 export function defineCLIOptions() {
   return yargs
     .usage("Usage: find_store <options>")
