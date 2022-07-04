@@ -1,5 +1,3 @@
-// this was pulled from https://www.geodatasource.com/developers/javascript
-
 export function getDistance(lat1, lon1, lat2, lon2, unit) {
   if (!lat1 || !lon1 || !lat2 || !lon2) {
     throw new Error("getDistance isn't getting its needed inputs; this is bad");
