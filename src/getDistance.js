@@ -2,7 +2,7 @@
 
 export function getDistance(lat1, lon1, lat2, lon2, unit) {
   if (!lat1 || !lon1 || !lat2 || !lon2) {
-    throw new Error("getDistance isn't getting its needed input; this is bad");
+    throw new Error("getDistance isn't getting its needed inputs; this is bad");
   }
   if (lat1 == lat2 && lon1 == lon2) {
     return 0;

@@ -1,6 +1,11 @@
 import { getDistance } from "./getDistance.js";
 
 export function generateOutput(closestStore, lat, lon, options) {
+  if (!closestStore || !lat || !lon || !options) {
+    throw new Error(
+      "findClosestStore isn't getting its needed inputs; this is bad"
+    );
+  }
   var answer = {
     storeAddress: `${closestStore.Address}, ${closestStore.City}, ${closestStore.State} ${closestStore["Zip Code"]}`,
     distance: `${getDistance(

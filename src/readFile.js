@@ -1,14 +1,10 @@
 import fs from "fs";
 import { parse } from "csv-parse/sync";
 
-/*
-  desired test cases
-  ------------------
-  1. it should fail if filepath don't exist
-  2. it should return an array
-*/
-
 export function readFile(filepath) {
+  if (!filepath) {
+    throw new Error("Error! readFile isn't getting its needed filepath.");
+  }
   const input = fs.readFileSync(filepath);
   return parse(input, {
     columns: true,

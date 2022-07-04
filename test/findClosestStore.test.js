@@ -1,7 +1,7 @@
 import { findClosestStore } from "../src/findClosestStore.js";
 import { expect } from "chai";
 
-describe("Testing findClosestStore function", function () {
+describe("Testing the findClosestStore function", function () {
   it("1. It should fail if there are no parameters", function () {
     expect(findClosestStore).to.throw();
   });

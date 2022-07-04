@@ -26,7 +26,7 @@ describe("Testing the Geocoding API function", function () {
       expectedResult
     );
   });
-  it("3. It should return an object with lat and lon for a valid zipcode", async function () {
+  it("4. It should return an object with lat and lon for a valid zipcode", async function () {
     const validOptions = {
       zip: 80829,
     };
