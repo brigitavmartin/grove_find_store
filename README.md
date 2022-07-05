@@ -6,7 +6,7 @@ It is a javascript application that finds the distance (as the crow flies) betwe
 
 All functions except defineCLIOptions.js are tested using Mocha JS and Chai JS, including the extension chaiAsPromised for callGeocodingAPI.test.js.
 
-Usage matches the given CLI specs, as shown below, although there are single-letter options included (such as "-a" for "-address", "-z" for "-zip", etc).
+Usage matches the given CLI specs, as shown below, although there are single-letter options included (such as "-a" for "-address", "-z" for "-zip", etc). Although the Grove stores in the csv file are in the US, this function still returns the closest store by distance when you input a starting address outside of the US.
 
 ```
 Find Store
@@ -34,7 +34,7 @@ Example
 Installation Instructions:
 
 1. If you don't have it already, download and install nodeJS (which comes with npm) at https://nodejs.org/en/download/
-2. Create a free account and a project at https://www.geoapify.com to generate an api key then add it to your environment variables. {insert instructions}
-3. Clone this repo.
+2. Clone this repo.
+3. Create a free account and a project at https://www.geoapify.com to generate an api key then create a `.env` file the project folder. Add the key in using the syntax, `geoapify="[YOUR API KEY]`. Make sure to include this `.env` file in your gitignore.
 4. Open a Command Line or Terminal window and install the Find Store CLI by entering `npm install --location=global`
    Note: Depending on your set-up, you may need to add `sudo` before the rest of the command.
