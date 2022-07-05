@@ -3,6 +3,10 @@
 
 name: Node.js CI
 
+env:
+  ## Sets environment variable
+  geoapify: ${{ secrets.geoapify }}
+
 on:
   push:
     branches: [ "main" ]
